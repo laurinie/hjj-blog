@@ -1,0 +1,31 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Post list styling
+.post-list {
+  list-style: none;
+  padding-left: 0;
+  
+  .post-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-date {
+    color: #767676;
+    font-size: 0.9rem;
+  }
+  
+  h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+}

@@ -6,11 +6,19 @@ title: Happamia sanoi kettu pihlajanmarjoista
 
 Tarinoita ja turinoita ja sen semmoista.
 
+<h2>Viimeisimmät kirjoitukset</h2>
 
-<ul>
+<ul class="post-list">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+    <li class="post-item">
+      <span class="post-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      {% if post.excerpt %}
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Lue lisää &raquo;</a>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
